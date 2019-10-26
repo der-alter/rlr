@@ -50,7 +50,9 @@ class App extends Component {
     const { searchTerm, list } = this.state;
     return (
       <div className="App">
-        <Search value={searchTerm} onChange={this.onSearchChange} />
+        <Search value={searchTerm} onChange={this.onSearchChange}>
+          Search
+        </Search>
         <Table list={list} pattern={searchTerm} onDismiss={this.onDismiss} />
       </div>
     );
@@ -58,10 +60,10 @@ class App extends Component {
 }
 
 function Search(props) {
-  const { value, onChange } = props;
+  const { value, onChange, children } = props;
   return (
     <form>
-      <input type="text" value={value} onChange={onChange} />
+      {children} <input type="text" value={value} onChange={onChange} />
     </form>
   );
 }
