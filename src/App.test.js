@@ -24,12 +24,21 @@ describe('App', () => {
 describe('Search', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<Search>Search</Search>, div);
+    ReactDOM.render(
+      <Search onChange={() => 'ok'} onSubmit={() => 'ok'} value="ok">
+        Search
+      </Search>,
+      div,
+    );
     ReactDOM.unmountComponentAtNode(div);
   });
 
   test('has a valid snapshot', () => {
-    const component = renderer.create(<Search>Search</Search>);
+    const component = renderer.create(
+      <Search onChange={() => 'ok'} onSubmit={() => 'ok'} value="ok">
+        Search
+      </Search>,
+    );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -38,12 +47,12 @@ describe('Search', () => {
 describe('Button', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<Button>Give Me More</Button>, div);
+    ReactDOM.render(<Button onClick={() => 'ok'}>Give Me More</Button>, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 
   test('has a valid snapshot', () => {
-    const component = renderer.create(<Button>Give Me More</Button>);
+    const component = renderer.create(<Button onClick={() => 'ok'}>Give Me More</Button>);
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -55,6 +64,7 @@ describe('Table', () => {
       { title: '1', author: '1', num_comments: 1, points: 2, objectID: 'y' },
       { title: '2', author: '2', num_comments: 1, points: 2, objectID: 'z' },
     ],
+    onDismiss: () => 'ok',
   };
 
   it('renders without crashing', () => {

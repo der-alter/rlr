@@ -31,6 +31,7 @@ exports[`App has a valid snapshot 1`] = `
 exports[`Button has a valid snapshot 1`] = `
 <button
   className=""
+  onClick={[Function]}
   type="button"
 >
   Give Me More
@@ -38,10 +39,14 @@ exports[`Button has a valid snapshot 1`] = `
 `;
 
 exports[`Search has a valid snapshot 1`] = `
-<form>
+<form
+  onSubmit={[Function]}
+>
   <input
     className="input-reset ba b--black-20 pa2"
+    onChange={[Function]}
     type="text"
+    value="ok"
   />
   <button
     className="ml2 pa1 br2 fw6 black-70 pointer"
