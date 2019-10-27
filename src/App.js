@@ -16,6 +16,7 @@ class App extends Component {
       results: null,
       searchKey: '',
       searchTerm: DEFAULT_QUERY,
+      error: null,
     };
 
     this.needsToSearchTopStories = this.needsToSearchTopStories.bind(this);
@@ -49,7 +50,7 @@ class App extends Component {
     )
       .then(response => response.json())
       .then(result => this.setSearchTopStories(result))
-      .catch(error => error);
+      .catch(error => this.setState({ error }));
   }
 
   componentDidMount() {
@@ -89,18 +90,22 @@ class App extends Component {
   }
 
   render() {
-    const { searchTerm, results, searchKey } = this.state;
+    const { searchTerm, results, searchKey, error } = this.state;
     const page = (results && results[searchKey] && results[searchKey].page) || 0;
     const list = (results && results[searchKey] && results[searchKey].hits) || [];
 
     return (
-      <div className="App">
+      <div>
         <div className="pa2 bb">
           <Search value={searchTerm} onChange={this.onSearchChange} onSubmit={this.onSearchSubmit}>
             Search
           </Search>
         </div>
-        <Table list={list} pattern={searchTerm} onDismiss={this.onDismiss} />
+        {error ? (
+          <p>Something went wrong.</p>
+        ) : (
+          <Table list={list} pattern={searchTerm} onDismiss={this.onDismiss} />
+        )}
         {results && (
           <div className="pa2 bt">
             <Button onClick={() => this.fetchSearchTopStories(searchKey, page + 1)}>More</Button>
