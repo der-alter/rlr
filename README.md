@@ -9,7 +9,9 @@ https://github.com/the-road-to-learn-react/react-controlled-components-examples
 https://www.robinwieruch.de/react-component-composition  
 https://www.robinwieruch.de/react-pass-props-to-component  
 https://www.robinwieruch.de/react-fetching-data  
-https://www.robinwieruch.de/conditional-rendering-react/
+https://www.robinwieruch.de/conditional-rendering-react/  
+https://www.robinwieruch.de/react-warning-cant-call-setstate-on-an-unmounted-component  
+https://www.robinwieruch.de/why-frameworks-matter
 
 ### CSS options
 
