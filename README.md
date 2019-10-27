@@ -8,7 +8,8 @@ https://medium.com/dubizzletechblog/setting-up-prettier-and-eslint-for-js-and-re
 https://github.com/the-road-to-learn-react/react-controlled-components-examples  
 https://www.robinwieruch.de/react-component-composition  
 https://www.robinwieruch.de/react-pass-props-to-component  
-https://www.robinwieruch.de/react-fetching-data
+https://www.robinwieruch.de/react-fetching-data  
+https://www.robinwieruch.de/conditional-rendering-react/
 
 ### CSS options
 
