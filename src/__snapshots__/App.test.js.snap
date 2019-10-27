@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App has a valid snapshot 1`] = `
+<div>
+  <div
+    className="pa2 bb"
+  >
+    <form
+      onSubmit={[Function]}
+    >
+      <input
+        className="input-reset ba b--black-20 pa2"
+        onChange={[Function]}
+        type="text"
+        value="redux"
+      />
+      <button
+        className="ml2 pa1 br2 fw6 black-70 pointer"
+        type="submit"
+      >
+        Search
+      </button>
+    </form>
+  </div>
+  <div
+    className="pa2 f6"
+  />
+</div>
+`;
+
+exports[`Button has a valid snapshot 1`] = `
+<button
+  className=""
+  type="button"
+>
+  Give Me More
+</button>
+`;
+
+exports[`Search has a valid snapshot 1`] = `
+<form>
+  <input
+    className="input-reset ba b--black-20 pa2"
+    type="text"
+  />
+  <button
+    className="ml2 pa1 br2 fw6 black-70 pointer"
+    type="submit"
+  >
+    Search
+  </button>
+</form>
+`;
+
+exports[`Table has a valid snapshot 1`] = `
+<div
+  className="pa2 f6"
+>
+  <div>
+    <span
+      className="pa1"
+    >
+      <a>
+        1
+      </a>
+    </span>
+    <span
+      className="pa1"
+    >
+      1
+    </span>
+    <span
+      className="pa1"
+    >
+      1
+    </span>
+    <span
+      className="pa1"
+    >
+      2
+    </span>
+    <span
+      className="pa1"
+    >
+      <button
+        className="pa1 br2 fw6 black-70 pointer"
+        onClick={[Function]}
+        type="button"
+      >
+        Dismiss
+      </button>
+    </span>
+  </div>
+  <div>
+    <span
+      className="pa1"
+    >
+      <a>
+        2
+      </a>
+    </span>
+    <span
+      className="pa1"
+    >
+      2
+    </span>
+    <span
+      className="pa1"
+    >
+      1
+    </span>
+    <span
+      className="pa1"
+    >
+      2
+    </span>
+    <span
+      className="pa1"
+    >
+      <button
+        className="pa1 br2 fw6 black-70 pointer"
+        onClick={[Function]}
+        type="button"
+      >
+        Dismiss
+      </button>
+    </span>
+  </div>
+</div>
+`;
