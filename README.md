@@ -12,6 +12,8 @@ https://www.robinwieruch.de/react-component-composition
 
 https://www.robinwieruch.de/react-pass-props-to-component
 
+https://www.robinwieruch.de/react-fetching-data
+
 ### CSS options
 
 https://github.com/styled-components/styled-components
