@@ -144,19 +144,32 @@ Button.defaultProps = {
   className: '',
 };
 
-const Search = ({ value, onChange, onSubmit, children }) => (
-  <form onSubmit={onSubmit}>
-    <input
-      type="text"
-      value={value}
-      onChange={onChange}
-      className="input-reset ba b--black-20 pa2"
-    />
-    <button type="submit" className="ml2 pa1 br2 fw6 black-70 pointer">
-      {children}
-    </button>
-  </form>
-);
+class Search extends Component {
+  componentDidMount() {
+    if (this.input) {
+      this.input.focus();
+    }
+  }
+
+  render() {
+    const { value, onChange, onSubmit, children } = this.props;
+
+    return (
+      <form onSubmit={onSubmit}>
+        <input
+          type="text"
+          value={value}
+          onChange={onChange}
+          ref={el => (this.input = el)}
+          className="input-reset ba b--black-20 pa2"
+        />
+        <button type="submit" className="ml2 pa1 br2 fw6 black-70 pointer">
+          {children}
+        </button>
+      </form>
+    );
+  }
+}
 
 Search.propTypes = {
   value: PropTypes.string.isRequired,

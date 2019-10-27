@@ -12,7 +12,8 @@ https://www.robinwieruch.de/react-fetching-data
 https://www.robinwieruch.de/conditional-rendering-react/  
 https://www.robinwieruch.de/react-warning-cant-call-setstate-on-an-unmounted-component  
 https://www.robinwieruch.de/why-frameworks-matter
-https://www.robinwieruch.de/react-testing-tutorial
+https://www.robinwieruch.de/react-testing-tutorial  
+https://www.robinwieruch.de/react-ref-attribute-dom-node
 
 ### CSS options
 
@@ -24,5 +25,5 @@ https://www.robinwieruch.de/react-semantic-ui-tutorial/
 
 ### Testing libs
 
-https://jestjs.io/
+https://jestjs.io/  
 https://github.com/airbnb/enzyme
