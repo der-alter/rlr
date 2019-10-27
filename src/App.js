@@ -122,27 +122,31 @@ class App extends Component {
         ) : (
           <Table list={list} pattern={searchTerm} onDismiss={this.onDismiss} />
         )}
-        {isLoading ? (
-          <Loading />
-        ) : (
-          results && (
-            <div className="pa2 bt">
-              <Button onClick={() => this.fetchSearchTopStories(searchKey, page + 1)}>More</Button>
-            </div>
-          )
-        )}
+        {
+          <div className="pa2 bt">
+            <ButtonWithLoading
+              isLoading={isLoading}
+              onClick={() => this.fetchSearchTopStories(searchKey, page + 1)}
+            >
+              More
+            </ButtonWithLoading>
+          </div>
+        }
       </div>
     );
   }
 }
 
 const Loading = () => <div>Loading...</div>;
+const withLoading = Component => props =>
+  props.isLoading ? <Loading /> : <Component {...props} />;
 
 const Button = ({ onClick, className, children }) => (
   <button onClick={onClick} className={className} type="button">
     {children}
   </button>
 );
+const ButtonWithLoading = withLoading(Button);
 
 Button.propTypes = {
   onClick: PropTypes.func.isRequired,

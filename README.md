@@ -13,7 +13,8 @@ https://www.robinwieruch.de/conditional-rendering-react/
 https://www.robinwieruch.de/react-warning-cant-call-setstate-on-an-unmounted-component  
 https://www.robinwieruch.de/why-frameworks-matter
 https://www.robinwieruch.de/react-testing-tutorial  
-https://www.robinwieruch.de/react-ref-attribute-dom-node
+https://www.robinwieruch.de/react-ref-attribute-dom-node  
+https://www.robinwieruch.de/react-higher-order-components
 
 ### CSS options
 
