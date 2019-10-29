@@ -28,3 +28,7 @@ https://www.robinwieruch.de/react-semantic-ui-tutorial/
 
 https://jestjs.io/  
 https://github.com/airbnb/enzyme
+
+### Other libs
+
+https://github.com/JedWatson/classnames

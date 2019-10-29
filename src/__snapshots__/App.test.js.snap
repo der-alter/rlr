@@ -24,7 +24,67 @@ exports[`App has a valid snapshot 1`] = `
   </div>
   <div
     className="pa2 f6"
-  />
+  >
+    <div>
+      <span
+        className="pa1"
+      >
+        <button
+          className="pa1 br2 fw6 black-70 pointer"
+          onClick={[Function]}
+          type="button"
+        >
+          Title
+        </button>
+      </span>
+      <span
+        className="pa1"
+      >
+        <button
+          className="pa1 br2 fw6 black-70 pointer"
+          onClick={[Function]}
+          type="button"
+        >
+          Author
+        </button>
+      </span>
+      <span
+        className="pa1"
+      >
+        <button
+          className="pa1 br2 fw6 black-70 pointer"
+          onClick={[Function]}
+          type="button"
+        >
+          Comments
+        </button>
+      </span>
+      <span
+        className="pa1"
+      >
+        <button
+          className="pa1 br2 fw6 black-70 pointer"
+          onClick={[Function]}
+          type="button"
+        >
+          Points
+        </button>
+      </span>
+      <span
+        className="pa1"
+      >
+        Archive
+      </span>
+    </div>
+    <div />
+  </div>
+  <div
+    className="pa2 bt"
+  >
+    <div>
+      Loading...
+    </div>
+  </div>
 </div>
 `;
 
@@ -65,24 +125,13 @@ exports[`Table has a valid snapshot 1`] = `
     <span
       className="pa1"
     >
-      <a>
-        1
-      </a>
-    </span>
-    <span
-      className="pa1"
-    >
-      1
-    </span>
-    <span
-      className="pa1"
-    >
-      1
-    </span>
-    <span
-      className="pa1"
-    >
-      2
+      <button
+        className="pa1 br2 fw6 black-70 pointer red"
+        onClick={[Function]}
+        type="button"
+      >
+        Title
+      </button>
     </span>
     <span
       className="pa1"
@@ -92,44 +141,108 @@ exports[`Table has a valid snapshot 1`] = `
         onClick={[Function]}
         type="button"
       >
-        Dismiss
+        Author
       </button>
+    </span>
+    <span
+      className="pa1"
+    >
+      <button
+        className="pa1 br2 fw6 black-70 pointer"
+        onClick={[Function]}
+        type="button"
+      >
+        Comments
+      </button>
+    </span>
+    <span
+      className="pa1"
+    >
+      <button
+        className="pa1 br2 fw6 black-70 pointer"
+        onClick={[Function]}
+        type="button"
+      >
+        Points
+      </button>
+    </span>
+    <span
+      className="pa1"
+    >
+      Archive
     </span>
   </div>
   <div>
-    <span
-      className="pa1"
-    >
-      <a>
-        2
-      </a>
-    </span>
-    <span
-      className="pa1"
-    >
-      2
-    </span>
-    <span
-      className="pa1"
-    >
-      1
-    </span>
-    <span
-      className="pa1"
-    >
-      2
-    </span>
-    <span
-      className="pa1"
-    >
-      <button
-        className="pa1 br2 fw6 black-70 pointer"
-        onClick={[Function]}
-        type="button"
+    <div>
+      <span
+        className="pa1"
       >
-        Dismiss
-      </button>
-    </span>
+        <a>
+          1
+        </a>
+      </span>
+      <span
+        className="pa1"
+      >
+        1
+      </span>
+      <span
+        className="pa1"
+      >
+        1
+      </span>
+      <span
+        className="pa1"
+      >
+        2
+      </span>
+      <span
+        className="pa1"
+      >
+        <button
+          className="pa1 br2 fw6 black-70 pointer"
+          onClick={[Function]}
+          type="button"
+        >
+          Dismiss
+        </button>
+      </span>
+    </div>
+    <div>
+      <span
+        className="pa1"
+      >
+        <a>
+          2
+        </a>
+      </span>
+      <span
+        className="pa1"
+      >
+        2
+      </span>
+      <span
+        className="pa1"
+      >
+        1
+      </span>
+      <span
+        className="pa1"
+      >
+        2
+      </span>
+      <span
+        className="pa1"
+      >
+        <button
+          className="pa1 br2 fw6 black-70 pointer"
+          onClick={[Function]}
+          type="button"
+        >
+          Dismiss
+        </button>
+      </span>
+    </div>
   </div>
 </div>
 `;
