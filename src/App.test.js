@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
 import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import App, { Search, Button, Table } from './App';
+import App, { Search, Button, Table, updateSearchTopStoriesState } from './App';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -81,5 +81,23 @@ describe('Table', () => {
   it('shows two items in list', () => {
     const element = shallow(<Table {...props} />);
     expect(element.find('* + div div').length).toBe(2);
+  });
+});
+
+describe('Search Top Stories State', () => {
+  it('returns a new state', () => {
+    const prevState = {
+      results: null,
+      searchKey: 'redux',
+      searchTerm: 'redux',
+      error: null,
+      isLoading: true,
+    };
+
+    const hits = [{ title: '1', author: '1', num_comments: 1, points: 2, objectID: 'x' }];
+    const page = 1;
+    const newState = updateSearchTopStoriesState(hits, page)(prevState);
+    expect(newState.results['redux'].hits).toMatchObject(hits);
+    expect(newState.results['redux'].page).toBe(page);
   });
 });
