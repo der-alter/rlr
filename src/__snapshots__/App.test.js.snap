@@ -3,19 +3,19 @@
 exports[`App has a valid snapshot 1`] = `
 <div>
   <div
-    className="pa2 bb"
+    className="pa-2 border-b-4"
   >
     <form
       onSubmit={[Function]}
     >
       <input
-        className="input-reset ba b--black-20 pa2"
+        className="border-solid border-2 border-gray-300 pa-2"
         onChange={[Function]}
         type="text"
         value="redux"
       />
       <button
-        className="ml2 pa1 br2 fw6 black-70 pointer"
+        className="ml-2 pa-1 rounded font-semibold text-gray-700"
         type="submit"
       >
         Search
@@ -23,14 +23,14 @@ exports[`App has a valid snapshot 1`] = `
     </form>
   </div>
   <div
-    className="pa2 f6"
+    className="pa-2 font-semibold"
   >
     <div>
       <span
-        className="pa1"
+        className="pa-1"
       >
         <button
-          className="pa1 br2 fw6 black-70 pointer"
+          className="pa-1 rounded font-semibold text-gray-700"
           onClick={[Function]}
           type="button"
         >
@@ -38,10 +38,10 @@ exports[`App has a valid snapshot 1`] = `
         </button>
       </span>
       <span
-        className="pa1"
+        className="pa-1"
       >
         <button
-          className="pa1 br2 fw6 black-70 pointer"
+          className="pa-1 rounded font-semibold text-gray-700"
           onClick={[Function]}
           type="button"
         >
@@ -49,10 +49,10 @@ exports[`App has a valid snapshot 1`] = `
         </button>
       </span>
       <span
-        className="pa1"
+        className="pa-1"
       >
         <button
-          className="pa1 br2 fw6 black-70 pointer"
+          className="pa-1 rounded font-semibold text-gray-700"
           onClick={[Function]}
           type="button"
         >
@@ -60,10 +60,10 @@ exports[`App has a valid snapshot 1`] = `
         </button>
       </span>
       <span
-        className="pa1"
+        className="pa-1"
       >
         <button
-          className="pa1 br2 fw6 black-70 pointer"
+          className="pa-1 rounded font-semibold text-gray-700"
           onClick={[Function]}
           type="button"
         >
@@ -71,7 +71,7 @@ exports[`App has a valid snapshot 1`] = `
         </button>
       </span>
       <span
-        className="pa1"
+        className="pa-1"
       >
         Archive
       </span>
@@ -79,7 +79,7 @@ exports[`App has a valid snapshot 1`] = `
     <div />
   </div>
   <div
-    className="pa2 bt"
+    className="pa-2 border-t-4"
   >
     <div>
       Loading...
@@ -103,13 +103,13 @@ exports[`Search has a valid snapshot 1`] = `
   onSubmit={[Function]}
 >
   <input
-    className="input-reset ba b--black-20 pa2"
+    className="border-solid border-2 border-gray-300 pa-2"
     onChange={[Function]}
     type="text"
     value="ok"
   />
   <button
-    className="ml2 pa1 br2 fw6 black-70 pointer"
+    className="ml-2 pa-1 rounded font-semibold text-gray-700"
     type="submit"
   >
     Search
@@ -119,14 +119,14 @@ exports[`Search has a valid snapshot 1`] = `
 
 exports[`Table has a valid snapshot 1`] = `
 <div
-  className="pa2 f6"
+  className="pa-2 font-semibold"
 >
   <div>
     <span
-      className="pa1"
+      className="pa-1"
     >
       <button
-        className="pa1 br2 fw6 black-70 pointer"
+        className="pa-1 rounded font-semibold text-gray-700"
         onClick={[Function]}
         type="button"
       >
@@ -134,10 +134,10 @@ exports[`Table has a valid snapshot 1`] = `
       </button>
     </span>
     <span
-      className="pa1"
+      className="pa-1"
     >
       <button
-        className="pa1 br2 fw6 black-70 pointer"
+        className="pa-1 rounded font-semibold text-gray-700"
         onClick={[Function]}
         type="button"
       >
@@ -145,10 +145,10 @@ exports[`Table has a valid snapshot 1`] = `
       </button>
     </span>
     <span
-      className="pa1"
+      className="pa-1"
     >
       <button
-        className="pa1 br2 fw6 black-70 pointer"
+        className="pa-1 rounded font-semibold text-gray-700"
         onClick={[Function]}
         type="button"
       >
@@ -156,10 +156,10 @@ exports[`Table has a valid snapshot 1`] = `
       </button>
     </span>
     <span
-      className="pa1"
+      className="pa-1"
     >
       <button
-        className="pa1 br2 fw6 black-70 pointer"
+        className="pa-1 rounded font-semibold text-gray-700"
         onClick={[Function]}
         type="button"
       >
@@ -167,7 +167,7 @@ exports[`Table has a valid snapshot 1`] = `
       </button>
     </span>
     <span
-      className="pa1"
+      className="pa-1"
     >
       Archive
     </span>
@@ -175,32 +175,32 @@ exports[`Table has a valid snapshot 1`] = `
   <div>
     <div>
       <span
-        className="pa1"
+        className="pa-1"
       >
         <a>
           1
         </a>
       </span>
       <span
-        className="pa1"
+        className="pa-1"
       >
         1
       </span>
       <span
-        className="pa1"
+        className="pa-1"
       >
         1
       </span>
       <span
-        className="pa1"
+        className="pa-1"
       >
         2
       </span>
       <span
-        className="pa1"
+        className="pa-1"
       >
         <button
-          className="pa1 br2 fw6 black-70 pointer"
+          className="pa-1 rounded font-semibold text-gray-700"
           onClick={[Function]}
           type="button"
         >
@@ -210,32 +210,32 @@ exports[`Table has a valid snapshot 1`] = `
     </div>
     <div>
       <span
-        className="pa1"
+        className="pa-1"
       >
         <a>
           2
         </a>
       </span>
       <span
-        className="pa1"
+        className="pa-1"
       >
         2
       </span>
       <span
-        className="pa1"
+        className="pa-1"
       >
         1
       </span>
       <span
-        className="pa1"
+        className="pa-1"
       >
         2
       </span>
       <span
-        className="pa1"
+        className="pa-1"
       >
         <button
-          className="pa1 br2 fw6 black-70 pointer"
+          className="pa-1 rounded font-semibold text-gray-700"
           onClick={[Function]}
           type="button"
         >

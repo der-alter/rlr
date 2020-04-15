@@ -3,7 +3,10 @@ import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
 import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import App, { Search, Button, Table, updateSearchTopStoriesState } from './App';
+import App, { updateSearchTopStoriesState } from './App';
+import Search from './Search';
+import Table from './Table';
+import { Button } from './Button';
 
 Enzyme.configure({ adapter: new Adapter() });
 
