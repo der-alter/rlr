@@ -12,10 +12,11 @@
     "react-scripts": "3.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "build:style": "tailwind build src/styles/index.css -o src/styles/tailwind.css",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start": "npm run build:style && react-scripts start",
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -44,11 +45,11 @@
     "eslint-plugin-react": "^7.14.3",
     "husky": "^3.0.7",
     "lint-staged": "^9.4.0",
-    "prettier": "^1.18.2",
+    "postcss-nesting": "^7.0.1",
     "pretty-quick": "^1.11.1",
     "react-addons-test-utils": "^15.6.2",
     "react-test-renderer": "^16.11.0",
-    "tachyons": "^4.11.1"
+    "tailwindcss": "^1.2.0"
   },
   "husky": {
     "hooks": {

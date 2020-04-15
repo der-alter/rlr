@@ -113,14 +113,14 @@ class App extends Component {
 
     return (
       <div>
-        <div className="pa2 bb">
+        <div className="pa-2 border-b-4">
           <Search value={searchTerm} onChange={this.onSearchChange} onSubmit={this.onSearchSubmit}>
             Search
           </Search>
         </div>
         {error ? <p>Something went wrong.</p> : <Table list={list} onDismiss={this.onDismiss} />}
         {
-          <div className="pa2 bt">
+          <div className="pa-2 border-t-4">
             <ButtonWithLoading
               isLoading={isLoading}
               onClick={() => this.fetchSearchTopStories(searchKey, page + 1)}
@@ -185,9 +185,9 @@ class Search extends Component {
           value={value}
           onChange={onChange}
           ref={el => (this.input = el)}
-          className="input-reset ba b--black-20 pa2"
+          className="border-solid border-2 border-gray-300 pa-2"
         />
-        <button type="submit" className="ml2 pa1 br2 fw6 black-70 pointer">
+        <button type="submit" className="ml-2 pa-1 rounded font-semibold text-gray-700">
           {children}
         </button>
       </form>
@@ -226,43 +226,43 @@ class Table extends Component {
     const reverseSortedList = isSortReverse ? sortedList.reverse() : sortedList;
 
     return (
-      <div className="pa2 f6">
+      <div className="pa-2 font-semibold">
         <div>
-          <span className="pa1">
+          <span className="pa-1">
             <Sort sortKey={'TITLE'} onSort={this.onSort} activeSortKey={sortKey}>
               Title
             </Sort>
           </span>
-          <span className="pa1">
+          <span className="pa-1">
             <Sort sortKey={'AUTHOR'} onSort={this.onSort} activeSortKey={sortKey}>
               Author
             </Sort>
           </span>
-          <span className="pa1">
+          <span className="pa-1">
             <Sort sortKey={'COMMENTS'} onSort={this.onSort} activeSortKey={sortKey}>
               Comments
             </Sort>
           </span>
-          <span className="pa1">
+          <span className="pa-1">
             <Sort sortKey={'POINTS'} onSort={this.onSort} activeSortKey={sortKey}>
               Points
             </Sort>
           </span>
-          <span className="pa1">Archive</span>
+          <span className="pa-1">Archive</span>
         </div>
         <div>
           {reverseSortedList.map(item => (
             <div key={item.objectID}>
-              <span className="pa1">
+              <span className="pa-1">
                 <a href={item.url}>{item.title}</a>
               </span>
-              <span className="pa1">{item.author}</span>
-              <span className="pa1">{item.num_comments}</span>
-              <span className="pa1">{item.points}</span>
-              <span className="pa1">
+              <span className="pa-1">{item.author}</span>
+              <span className="pa-1">{item.num_comments}</span>
+              <span className="pa-1">{item.points}</span>
+              <span className="pa-1">
                 <Button
                   onClick={() => onDismiss(item.objectID)}
-                  className="pa1 br2 fw6 black-70 pointer"
+                  className="pa-1 rounded font-semibold text-gray-700"
                 >
                   Dismiss
                 </Button>
@@ -289,7 +289,7 @@ Table.propTypes = {
 };
 
 const Sort = ({ sortKey, activeSortKey, onSort, children }) => {
-  const sortClass = classNames('pa1 br2 fw6 black-70 pointer', {
+  const sortClass = classNames('pa-1 rounded font-semibold text-gray-700', {
     red: sortKey === activeSortKey,
   });
 
