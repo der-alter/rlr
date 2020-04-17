@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Loading = () => <div>Loading...</div>;
-const withLoading = Component => props =>
+const withLoading = (Component) => (props) =>
   props.isLoading ? <Loading /> : <Component {...props} />;
 
 const Button = ({ onClick, className, children }) => (

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Search as Icon } from './svg';
 
 class Search extends Component {
   componentDidMount() {
@@ -12,15 +13,16 @@ class Search extends Component {
     const { value, onChange, onSubmit, children } = this.props;
 
     return (
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} className="flex flex-grow">
+        <Icon fill="#ed8936" />
         <input
           type="text"
           value={value}
           onChange={onChange}
-          ref={el => (this.input = el)}
-          className="border-solid border-2 border-gray-300 pa-2"
+          ref={(el) => (this.input = el)}
+          className="flex-grow ml-2 p-4 bg-orange-100 hover:bg-white"
         />
-        <button type="submit" className="ml-2 pa-1 rounded font-semibold text-gray-700">
+        <button type="submit" className="button mx-2">
           {children}
         </button>
       </form>

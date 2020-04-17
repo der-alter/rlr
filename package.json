@@ -12,11 +12,14 @@
     "react-scripts": "3.1.2"
   },
   "scripts": {
-    "build:style": "tailwind build src/styles/index.css -o src/styles/tailwind.css",
-    "build": "react-scripts build",
+    "start": "npm run watch:css & npm run watch:svg & react-scripts start",
+    "build": "npm run build:css && npm run build:svg && react-scripts build",
+    "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start": "npm run build:style && react-scripts start",
-    "test": "react-scripts test"
+    "build:css": "postcss ./assets/css/tailwind.css -o ./src/styles.css",
+    "watch:css": "watch 'npm run build:css' ./assets/css",
+    "build:svg": "svgr -d ./src/components/svg ./assets/svg",
+    "watch:svg": "watch 'npm run build:svg' ./assets/svg"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -34,7 +37,9 @@
     ]
   },
   "devDependencies": {
+    "@svgr/cli": "^5.3.1",
     "babel-eslint": "^10.0.3",
+    "date-fns": "^2.12.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
     "eslint": "^6.5.0",
@@ -45,11 +50,15 @@
     "eslint-plugin-react": "^7.14.3",
     "husky": "^3.0.7",
     "lint-staged": "^9.4.0",
+    "postcss-cli": "^7.1.0",
+    "postcss-import": "^12.0.1",
     "postcss-nesting": "^7.0.1",
+    "prettier": "^2.0.4",
     "pretty-quick": "^1.11.1",
     "react-addons-test-utils": "^15.6.2",
     "react-test-renderer": "^16.11.0",
-    "tailwindcss": "^1.2.0"
+    "tailwindcss": "^1.2.0",
+    "watch": "^1.0.2"
   },
   "husky": {
     "hooks": {

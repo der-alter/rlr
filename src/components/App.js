@@ -4,7 +4,7 @@ import Search from './Search';
 import Table from './Table';
 import { ButtonWithLoading } from './Button';
 
-const DEFAULT_QUERY = 'redux';
+const DEFAULT_QUERY = 'cryptoeconomics';
 const DEFAULT_HPP = '100';
 const PATH_BASE = 'https://hn.algolia.com/api/v1';
 const PATH_SEARCH = '/search';
@@ -49,12 +49,12 @@ class App extends Component {
     axios(
       `${PATH_BASE}${PATH_SEARCH}?${PARAM_SEARCH}${searchTerm}&${PARAM_PAGE}${page}&${PARAM_HPP}${DEFAULT_HPP}`,
     )
-      .then(result => {
+      .then((result) => {
         if (this._isMounted) {
           this.setSearchTopStories(result.data);
         }
       })
-      .catch(error => this.setState({ error }));
+      .catch((error) => this.setState({ error }));
   }
 
   componentDidMount() {
@@ -87,7 +87,7 @@ class App extends Component {
     const { searchKey, results } = this.state;
     const { hits, page } = results[searchKey];
 
-    const isNotId = item => item.objectID !== id;
+    const isNotId = (item) => item.objectID !== id;
     const updatedHits = hits.filter(isNotId);
 
     this.setState({
@@ -105,28 +105,34 @@ class App extends Component {
 
     return (
       <div>
-        <div className="pa-2 border-b-4">
+        <div className="flex justify-center items-center flex-row my-12">
+          <h1 className="order-1 text-lg text-gray-800 text-right px-4">
+            Hackers News Search Engine
+          </h1>
           <Search value={searchTerm} onChange={this.onSearchChange} onSubmit={this.onSearchSubmit}>
             Search
           </Search>
         </div>
-        {error ? <p>Something went wrong.</p> : <Table list={list} onDismiss={this.onDismiss} />}
-        {
-          <div className="pa-2 border-t-4">
-            <ButtonWithLoading
-              isLoading={isLoading}
-              onClick={() => this.fetchSearchTopStories(searchKey, page + 1)}
-            >
-              More
-            </ButtonWithLoading>
-          </div>
-        }
+        <div className="flex items-center flex-col">
+          {error ? <p>Something went wrong.</p> : <Table list={list} onDismiss={this.onDismiss} />}
+          {
+            <div className="my-4">
+              <ButtonWithLoading
+                isLoading={isLoading}
+                onClick={() => this.fetchSearchTopStories(searchKey, page + 1)}
+                className="button"
+              >
+                More
+              </ButtonWithLoading>
+            </div>
+          }
+        </div>
       </div>
     );
   }
 }
 
-const updateSearchTopStoriesState = (hits, page) => prevState => {
+const updateSearchTopStoriesState = (hits, page) => (prevState) => {
   const { searchKey, results } = prevState;
   const oldHits = results && results[searchKey] ? results[searchKey].hits : [];
   const updatedHits = [...oldHits, ...hits];

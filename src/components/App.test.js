@@ -64,8 +64,22 @@ describe('Button', () => {
 describe('Table', () => {
   const props = {
     list: [
-      { title: '1', author: '1', num_comments: 1, points: 2, objectID: 'y' },
-      { title: '2', author: '2', num_comments: 1, points: 2, objectID: 'z' },
+      {
+        title: '1',
+        author: '1',
+        num_comments: 1,
+        points: 2,
+        objectID: 'y',
+        created_at_i: 1453762117,
+      },
+      {
+        title: '2',
+        author: '2',
+        num_comments: 1,
+        points: 2,
+        objectID: 'z',
+        created_at_i: 1453762117,
+      },
     ],
     onDismiss: () => 'ok',
   };
@@ -83,7 +97,7 @@ describe('Table', () => {
 
   it('shows two items in list', () => {
     const element = shallow(<Table {...props} />);
-    expect(element.find('* + div div').length).toBe(2);
+    expect(element.find('* + tbody tr').length).toBe(2);
   });
 });
 

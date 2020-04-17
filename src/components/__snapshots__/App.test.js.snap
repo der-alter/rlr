@@ -1,0 +1,391 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App has a valid snapshot 1`] = `
+<div>
+  <div
+    className="flex justify-center items-center flex-row my-12"
+  >
+    <h1
+      className="order-1 text-lg text-gray-800 text-right px-4"
+    >
+      Hackers News Search Engine
+    </h1>
+    <form
+      className="flex flex-grow"
+      onSubmit={[Function]}
+    >
+      <svg
+        fill="#ed8936"
+        height={50}
+        viewBox="0 0 13.229 13.229"
+        width={50}
+      >
+        <g
+          imageRendering="optimizeQuality"
+          shapeRendering="geometricPrecision"
+          textRendering="geometricPrecision"
+        >
+          <path
+            className="search_svg__fil0"
+            d="M2.179 2.179a4.47 4.47 0 016.312 0c1.706 1.74 1.706 4.572 0 6.312-1.74 1.706-4.572 1.706-6.312 0a4.47 4.47 0 010-6.312zm.716.716a3.481 3.481 0 000 4.88c1.331 1.33 3.515 1.33 4.88 0 1.33-1.365 1.33-3.549 0-4.88a3.481 3.481 0 00-4.88 0z"
+          />
+          <path
+            className="search_svg__fil1"
+            d="M9.55 8.218l2.524 2.56a.887.887 0 010 1.296.887.887 0 01-1.296 0L8.218 9.55c.273-.17.512-.375.717-.614.239-.205.444-.444.614-.717z"
+          />
+          <path
+            className="search_svg__fil0"
+            d="M2.383 5.01a3.165 3.165 0 012.628-2.627l.102.683a2.187 2.187 0 00-1.365.682 2.187 2.187 0 00-.682 1.365z"
+          />
+        </g>
+      </svg>
+      <input
+        className="flex-grow ml-2 p-4 bg-orange-100 hover:bg-white"
+        onChange={[Function]}
+        type="text"
+        value="cryptoeconomics"
+      />
+      <button
+        className="button mx-2"
+        type="submit"
+      >
+        Search
+      </button>
+    </form>
+  </div>
+  <div
+    className="flex items-center flex-col"
+  >
+    <table
+      className="table-auto text-xs"
+    >
+      <thead
+        className="text-left"
+      >
+        <tr>
+          <th
+            className="px-4"
+          >
+            <button
+              className="pa-1 rounded font-semibold text-gray-700"
+              onClick={[Function]}
+              type="button"
+            >
+              title
+            </button>
+          </th>
+          <th
+            className="px-4"
+          >
+            <button
+              className="pa-1 rounded font-semibold text-gray-700"
+              onClick={[Function]}
+              type="button"
+            >
+              author
+            </button>
+          </th>
+          <th
+            className="px-4"
+          >
+            <button
+              className="pa-1 rounded font-semibold text-gray-700"
+              onClick={[Function]}
+              type="button"
+            >
+              coms
+            </button>
+          </th>
+          <th
+            className="px-4"
+          >
+            <button
+              className="pa-1 rounded font-semibold text-gray-700"
+              onClick={[Function]}
+              type="button"
+            >
+              pts
+            </button>
+          </th>
+          <th
+            className="px-4"
+          >
+            <button
+              className="pa-1 rounded font-semibold text-gray-700"
+              onClick={[Function]}
+              type="button"
+            >
+              created at
+            </button>
+          </th>
+          <td
+            className="px-4"
+          />
+        </tr>
+      </thead>
+      <tbody />
+    </table>
+    <div
+      className="my-4"
+    >
+      <div>
+        Loading...
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Button has a valid snapshot 1`] = `
+<button
+  className=""
+  onClick={[Function]}
+  type="button"
+>
+  Give Me More
+</button>
+`;
+
+exports[`Search has a valid snapshot 1`] = `
+<form
+  className="flex flex-grow"
+  onSubmit={[Function]}
+>
+  <svg
+    fill="#ed8936"
+    height={50}
+    viewBox="0 0 13.229 13.229"
+    width={50}
+  >
+    <g
+      imageRendering="optimizeQuality"
+      shapeRendering="geometricPrecision"
+      textRendering="geometricPrecision"
+    >
+      <path
+        className="search_svg__fil0"
+        d="M2.179 2.179a4.47 4.47 0 016.312 0c1.706 1.74 1.706 4.572 0 6.312-1.74 1.706-4.572 1.706-6.312 0a4.47 4.47 0 010-6.312zm.716.716a3.481 3.481 0 000 4.88c1.331 1.33 3.515 1.33 4.88 0 1.33-1.365 1.33-3.549 0-4.88a3.481 3.481 0 00-4.88 0z"
+      />
+      <path
+        className="search_svg__fil1"
+        d="M9.55 8.218l2.524 2.56a.887.887 0 010 1.296.887.887 0 01-1.296 0L8.218 9.55c.273-.17.512-.375.717-.614.239-.205.444-.444.614-.717z"
+      />
+      <path
+        className="search_svg__fil0"
+        d="M2.383 5.01a3.165 3.165 0 012.628-2.627l.102.683a2.187 2.187 0 00-1.365.682 2.187 2.187 0 00-.682 1.365z"
+      />
+    </g>
+  </svg>
+  <input
+    className="flex-grow ml-2 p-4 bg-orange-100 hover:bg-white"
+    onChange={[Function]}
+    type="text"
+    value="ok"
+  />
+  <button
+    className="button mx-2"
+    type="submit"
+  >
+    Search
+  </button>
+</form>
+`;
+
+exports[`Table has a valid snapshot 1`] = `
+<table
+  className="table-auto text-xs"
+>
+  <thead
+    className="text-left"
+  >
+    <tr>
+      <th
+        className="px-4"
+      >
+        <button
+          className="pa-1 rounded font-semibold text-gray-700"
+          onClick={[Function]}
+          type="button"
+        >
+          title
+        </button>
+      </th>
+      <th
+        className="px-4"
+      >
+        <button
+          className="pa-1 rounded font-semibold text-gray-700"
+          onClick={[Function]}
+          type="button"
+        >
+          author
+        </button>
+      </th>
+      <th
+        className="px-4"
+      >
+        <button
+          className="pa-1 rounded font-semibold text-gray-700"
+          onClick={[Function]}
+          type="button"
+        >
+          coms
+        </button>
+      </th>
+      <th
+        className="px-4"
+      >
+        <button
+          className="pa-1 rounded font-semibold text-gray-700"
+          onClick={[Function]}
+          type="button"
+        >
+          pts
+        </button>
+      </th>
+      <th
+        className="px-4"
+      >
+        <button
+          className="pa-1 rounded font-semibold text-gray-700"
+          onClick={[Function]}
+          type="button"
+        >
+          created at
+        </button>
+      </th>
+      <td
+        className="px-4"
+      />
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      className="py-4 hover:bg-yellow-300"
+    >
+      <td
+        className="px-4"
+      >
+        <a
+          className="underline"
+          href="https://news.ycombinator.com/item?id=y"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Read comments"
+        >
+          1
+        </a>
+      </td>
+      <td
+        className="px-4"
+      >
+        1
+      </td>
+      <td
+        className="px-4"
+      >
+        1
+         
+      </td>
+      <td
+        className="px-4"
+      >
+        2
+      </td>
+      <td
+        className="px-4"
+      >
+        about 4 years ago
+      </td>
+      <td
+        className="px-4"
+      >
+        <button
+          className=""
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="icon"
+            height={50}
+            style={
+              Object {
+                "fill": "#f56565",
+              }
+            }
+            viewBox="0 0 13.229 13.229"
+            width={50}
+          >
+            <path
+              d="M.756 9.544l2.93-2.93-2.93-2.929L3.686.756l2.929 2.93L9.544.755l2.93 2.93-2.93 2.929 2.93 2.929-2.93 2.93-2.93-2.93-2.929 2.93z"
+            />
+          </svg>
+        </button>
+      </td>
+    </tr>
+    <tr
+      className="py-4 hover:bg-yellow-300"
+    >
+      <td
+        className="px-4"
+      >
+        <a
+          className="underline"
+          href="https://news.ycombinator.com/item?id=z"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="Read comments"
+        >
+          2
+        </a>
+      </td>
+      <td
+        className="px-4"
+      >
+        2
+      </td>
+      <td
+        className="px-4"
+      >
+        1
+         
+      </td>
+      <td
+        className="px-4"
+      >
+        2
+      </td>
+      <td
+        className="px-4"
+      >
+        about 4 years ago
+      </td>
+      <td
+        className="px-4"
+      >
+        <button
+          className=""
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="icon"
+            height={50}
+            style={
+              Object {
+                "fill": "#f56565",
+              }
+            }
+            viewBox="0 0 13.229 13.229"
+            width={50}
+          >
+            <path
+              d="M.756 9.544l2.93-2.93-2.93-2.929L3.686.756l2.929 2.93L9.544.755l2.93 2.93-2.93 2.929 2.93 2.929-2.93 2.93-2.93-2.93-2.929 2.93z"
+            />
+          </svg>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
