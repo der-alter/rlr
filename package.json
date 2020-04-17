@@ -37,8 +37,10 @@
     ]
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.1.2",
     "@svgr/cli": "^5.3.1",
     "babel-eslint": "^10.0.3",
+    "cssnano": "^4.1.10",
     "date-fns": "^2.12.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",

@@ -25,6 +25,10 @@ https://www.robinwieruch.de/create-react-app-css-modules/
 https://www.robinwieruch.de/create-react-app-with-sass-support/  
 https://www.robinwieruch.de/react-semantic-ui-tutorial/
 
+### Tailwind
+
+https://flaviocopes.com/tailwind-setup/
+
 ### Testing libs
 
 https://jestjs.io/  
