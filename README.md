@@ -1,8 +1,6 @@
-# Demo
-
-https://hnsearch.web.app/
-
 # Road to learn React companion repo
+
+![Build and Deploy](https://github.com/catsoap/rlr/workflows/Build%20and%20Deploy/badge.svg)
 
 https://leanpub.com/the-road-to-learn-react
 
