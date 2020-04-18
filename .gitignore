@@ -9,6 +9,9 @@
 /.pnp
 .pnp.js
 
+# deploy
+.firebase
+
 # logs
 npm-debug.log*
 yarn-debug.log*
