@@ -3,6 +3,7 @@ import axios from 'axios';
 import Search from './Search';
 import Table from './Table';
 import { ButtonWithLoading } from './Button';
+import { Search as SearchIcon } from './svg';
 
 const DEFAULT_QUERY = 'cryptoeconomics';
 const DEFAULT_HPP = '100';
@@ -110,7 +111,8 @@ class App extends Component {
             Hackers News Search Engine
           </h1>
           <Search value={searchTerm} onChange={this.onSearchChange} onSubmit={this.onSearchSubmit}>
-            Search
+            <SearchIcon fill="white" className="sm:hidden" />
+            <span className="hidden sm:block">Search</span>
           </Search>
         </div>
         <div className="flex items-center flex-col">

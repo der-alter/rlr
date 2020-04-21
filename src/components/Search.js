@@ -14,9 +14,7 @@ class Search extends Component {
 
     return (
       <form onSubmit={onSubmit} className="flex flex-grow">
-        <span className="hidden sm:block">
-          <Icon fill="#ed8936" />
-        </span>
+        <Icon fill="#ed8936" className="hidden sm:block" />
 
         <input
           type="text"
