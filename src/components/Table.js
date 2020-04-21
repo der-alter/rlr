@@ -41,7 +41,7 @@ class Table extends Component {
 
     return (
       <table className="table-auto text-xs">
-        <thead className="text-left">
+        <thead className="text-left hidden md:table-header-group">
           <tr>
             <th className="px-4">
               <Sort sortKey={'TITLE'} onSort={this.onSort} activeSortKey={sortKey}>
@@ -87,7 +87,7 @@ class Table extends Component {
                 {item.url && (
                   <a
                     href={item.url}
-                    className="underline"
+                    className="ml-1 button-small"
                     title={`Go to original post: ${item.url}`}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -96,13 +96,13 @@ class Table extends Component {
                   </a>
                 )}
               </td>
-              <td className="px-4">{item.author}</td>
-              <td className="px-4">{item.num_comments} </td>
-              <td className="px-4">{item.points}</td>
-              <td className="px-4">
+              <td className="px-4 hidden md:table-cell">{item.author}</td>
+              <td className="px-4 hidden md:table-cell">{item.num_comments} </td>
+              <td className="px-4 hidden md:table-cell">{item.points}</td>
+              <td className="px-4 hidden md:table-cell">
                 {formatDistance(new Date(item.created_at_i * 1000), now, { addSuffix: true })}
               </td>
-              <td className="px-4">
+              <td className="px-4 hidden md:table-cell">
                 <Button onClick={() => onDismiss(item.objectID)}>
                   <Dismiss className="icon" style={{ fill: '#f56565' }} />
                 </Button>

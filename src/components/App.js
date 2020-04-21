@@ -105,8 +105,8 @@ class App extends Component {
 
     return (
       <div>
-        <div className="flex justify-center items-center flex-row my-12">
-          <h1 className="order-1 text-lg text-gray-800 text-right px-4">
+        <div className="flex justify-center items-center flex-col md:flex-row my-12">
+          <h1 className="md:order-1 text-lg text-gray-800 text-right px-4 mb-8 md:mb-0">
             Hackers News Search Engine
           </h1>
           <Search value={searchTerm} onChange={this.onSearchChange} onSubmit={this.onSearchSubmit}>
