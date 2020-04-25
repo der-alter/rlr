@@ -19,26 +19,15 @@ https://www.robinwieruch.de/react-ref-attribute-dom-node
 https://www.robinwieruch.de/react-higher-order-components  
 https://www.robinwieruch.de/learn-react-before-using-redux
 
-### CSS options
+### Theme UI
 
-https://github.com/styled-components/styled-components  
-https://github.com/css-modules/css-modules  
-https://www.robinwieruch.de/create-react-app-css-modules/  
-https://www.robinwieruch.de/create-react-app-with-sass-support/  
-https://www.robinwieruch.de/react-semantic-ui-tutorial/
-
-### Tailwind
-
-https://flaviocopes.com/tailwind-setup/
+https://theme-ui.com/  
+https://medium.com/@imdongchen/theme-ui-encouraging-consistent-and-responsive-styling-practices-8dba21f053b0
 
 ### Testing libs
 
 https://jestjs.io/  
 https://github.com/airbnb/enzyme
-
-### Other libs
-
-https://github.com/JedWatson/classnames
 
 ### Follow up
 

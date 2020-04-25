@@ -1,0 +1,9 @@
+<svg width="50" height="50" version="1.1" viewBox="0 0 13.229 13.229" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(0 -283.77)">
+  <g transform="matrix(.034123 0 0 .034123 .88195 284.65)" image-rendering="optimizeQuality" shape-rendering="geometricPrecision">
+   <path class="fil0" d="m38 38c51-51 134-51 185 0 50 51 50 134 0 185-51 50-134 50-185 0-51-51-51-134 0-185zm21 21c-39 40-39 103 0 143 39 39 103 39 143 0 39-40 39-104 0-143-40-39-103-39-143 0z"/>
+   <path class="fil1" d="m254 215 74 75c11 10 11 28 0 38-10 11-28 11-38 0l-75-74c8-5 15-11 21-18 7-6 13-13 18-21z"/>
+   <path class="fil0" d="m44 121c3-19 12-37 26-51s32-23 51-26l3 20c-16 2-30 9-40 20-11 10-18 24-20 40z"/>
+  </g>
+ </g>
+</svg>

@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Button as B, Spinner } from 'theme-ui';
 
-const Loading = () => <div>Loading...</div>;
 const withLoading = (Component) => (props) =>
-  props.isLoading ? <Loading /> : <Component {...props} />;
+  props.isLoading ? <Spinner /> : <Component {...props} />;
 
-const Button = ({ onClick, className, children }) => (
-  <button onClick={onClick} className={className} type="button">
+const Button = ({ onClick, children }) => (
+  <B onClick={onClick} type="button">
     {children}
-  </button>
+  </B>
 );
 const ButtonWithLoading = withLoading(Button);
 

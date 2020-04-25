@@ -1,6 +1,10 @@
+/** @jsx jsx */
+// eslint-disable-next-line
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Search as Icon } from './svg';
+// eslint-disable-next-line
+import { Button, Input, jsx } from 'theme-ui';
+import { ReactComponent as SearchIcon } from '../svg/search.svg';
 
 class Search extends Component {
   componentDidMount() {
@@ -10,29 +14,28 @@ class Search extends Component {
   }
 
   render() {
-    const { value, onChange, onSubmit, children } = this.props;
+    const { searchTerm, onChange, onSubmit, children } = this.props;
 
     return (
-      <form onSubmit={onSubmit} className="flex flex-grow">
-        <Icon fill="#ed8936" className="hidden sm:block" />
-
-        <input
-          type="text"
-          value={value}
+      <form onSubmit={onSubmit} sx={{ display: 'flex', flexGrow: 1, mt: [3, 'auto'] }}>
+        <SearchIcon sx={{ display: ['none', 'block'], fill: 'primary' }} />
+        <Input
+          value={searchTerm}
           onChange={onChange}
           ref={(el) => (this.input = el)}
-          className="flex-grow ml-2 p-4 bg-orange-100 hover:bg-white"
+          sx={{ flexGrow: 1, mx: 2 }}
         />
-        <button type="submit" className="button mx-2">
-          {children}
-        </button>
+        <Button type="submit" py={2}>
+          <span sx={{ display: ['none', 'inline'] }}>{children}</span>
+          <SearchIcon sx={{ display: [null, 'none'], fill: 'white' }} />
+        </Button>
       </form>
     );
   }
 }
 
 Search.propTypes = {
-  value: PropTypes.string.isRequired,
+  searchTerm: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
   children: PropTypes.node,

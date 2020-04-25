@@ -1,10 +1,13 @@
+/** @jsx jsx */
+// eslint-disable-next-line
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import formatDistance from 'date-fns/formatDistance';
 import { sortBy } from 'lodash';
-import { Button } from './Button';
-import { Dismiss, Url } from './svg';
+import { ReactComponent as DismissIcon } from '../svg/dismiss.svg';
+import { ReactComponent as UrlIcon } from '../svg/url.svg';
+// eslint-disable-next-line
+import { jsx, Button, IconButton, Link } from 'theme-ui';
 
 const SORTS = {
   NONE: (list) => list,
@@ -40,77 +43,82 @@ class Table extends Component {
     const now = new Date();
 
     return (
-      <table className="table-auto text-xs">
-        <thead className="text-left hidden md:table-header-group">
-          <tr>
-            <th className="px-4">
-              <Sort sortKey={'TITLE'} onSort={this.onSort} activeSortKey={sortKey}>
-                title
-              </Sort>
-            </th>
-            <th className="px-4">
-              <Sort sortKey={'AUTHOR'} onSort={this.onSort} activeSortKey={sortKey}>
-                author
-              </Sort>
-            </th>
-            <th className="px-4">
-              <Sort sortKey={'COMMENTS'} onSort={this.onSort} activeSortKey={sortKey}>
-                coms
-              </Sort>
-            </th>
-            <th className="px-4">
-              <Sort sortKey={'POINTS'} onSort={this.onSort} activeSortKey={sortKey}>
-                pts
-              </Sort>
-            </th>
-            <th className="px-4">
-              <Sort sortKey={'CREATEDAT'} onSort={this.onSort} activeSortKey={sortKey}>
-                created at
-              </Sort>
-            </th>
-            <td className="px-4"></td>
-          </tr>
-        </thead>
-        <tbody>
-          {reverseSortedList.map((item) => (
-            <tr key={item.objectID} className="py-4 hover:bg-yellow-300">
-              <td className="px-4">
-                <a
-                  href={`https://news.ycombinator.com/item?id=${item.objectID}`}
-                  className="underline"
-                  title={item.title ? 'Read comments' : 'Read comment'}
-                  target="_blank"
-                  rel="noopener noreferrer"
+      <section>
+        <header sx={{ display: ['none', 'flex'], mb: 3 }}>
+          <div sx={{ flex: 16 }}>
+            <Sort sortKey={'TITLE'} onSort={this.onSort} activeSortKey={sortKey}>
+              Title
+            </Sort>
+          </div>
+          <div sx={{ flex: 3 }}>
+            <Sort sortKey={'AUTHOR'} onSort={this.onSort} activeSortKey={sortKey}>
+              Author
+            </Sort>
+          </div>
+          <div sx={{ flex: 1 }}>
+            <Sort sortKey={'COMMENTS'} onSort={this.onSort} activeSortKey={sortKey}>
+              Coms
+            </Sort>
+          </div>
+          <div sx={{ flex: 1 }}>
+            <Sort sortKey={'POINTS'} onSort={this.onSort} activeSortKey={sortKey}>
+              Pts
+            </Sort>
+          </div>
+          <div sx={{ flex: 2 }}>
+            <Sort sortKey={'CREATEDAT'} onSort={this.onSort} activeSortKey={sortKey}>
+              Date
+            </Sort>
+          </div>
+          <div sx={{ flex: 1 }}></div>
+        </header>
+
+        {reverseSortedList.map((item, index) => (
+          <div key={index} sx={{ display: 'flex', fontSize: '.85em' }}>
+            <div sx={{ flex: 16 }}>
+              <Link
+                href={`https://news.ycombinator.com/item?id=${item.objectID}`}
+                title={item.title ? 'Read comments' : 'Read comment'}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {item.title ? item.title : item.comment_text.substring(0, 70) + '...'}
+              </Link>
+              {item.url && (
+                <IconButton
+                  onClick={() => window.open(item.url, '_blank')}
+                  title={`Go to original post: ${item.url}`}
                 >
-                  {item.title ? item.title : item.comment_text.substring(0, 70) + '...'}
-                </a>
-                {item.url && (
-                  <a
-                    href={item.url}
-                    className="ml-1 button-small"
-                    title={`Go to original post: ${item.url}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Url className="icon ml-1" />
-                  </a>
-                )}
-              </td>
-              <td className="px-4 hidden md:table-cell">{item.author}</td>
-              <td className="px-4 hidden md:table-cell">{item.num_comments} </td>
-              <td className="px-4 hidden md:table-cell">{item.points}</td>
-              <td className="px-4 hidden md:table-cell">
-                {formatDistance(new Date(item.created_at_i * 1000), now, { addSuffix: true })}
-              </td>
-              <td className="px-4 hidden md:table-cell">
-                <Button onClick={() => onDismiss(item.objectID)}>
-                  <Dismiss className="icon" style={{ fill: '#f56565' }} />
-                </Button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+                  <UrlIcon
+                    sx={{
+                      fill: 'cornflowerblue',
+                      width: '1.25em',
+                      height: '1.25em',
+                    }}
+                  />
+                </IconButton>
+              )}
+            </div>
+            <div sx={{ flex: 3, display: ['none', 'block'] }}>{item.author}</div>
+            <div sx={{ flex: 1, display: ['none', 'block'] }}>{item.num_comments} </div>
+            <div sx={{ flex: 1, display: ['none', 'block'] }}>{item.points}</div>
+            <div sx={{ flex: 2, display: ['none', 'block'] }}>
+              {formatDistance(new Date(item.created_at_i * 1000), now, { addSuffix: true })}
+            </div>
+            <div sx={{ flex: 1, display: ['none', 'block'] }}>
+              <IconButton onClick={() => onDismiss(item.objectID)}>
+                <DismissIcon
+                  sx={{
+                    fill: 'danger',
+                    width: '1em',
+                    height: '1em',
+                  }}
+                />
+              </IconButton>
+            </div>
+          </div>
+        ))}
+      </section>
     );
   }
 }
@@ -129,12 +137,18 @@ Table.propTypes = {
 };
 
 const Sort = ({ sortKey, activeSortKey, onSort, children }) => {
-  const sortClass = classNames('pa-1 rounded font-semibold text-gray-700', {
-    red: sortKey === activeSortKey,
-  });
+  const colors =
+    sortKey === activeSortKey
+      ? {
+          bg: 'muted',
+          borderColor: 'primary',
+        }
+      : {
+          bg: 'background',
+        };
 
   return (
-    <Button onClick={() => onSort(sortKey)} className={sortClass}>
+    <Button onClick={() => onSort(sortKey)} sx={{ variant: 'buttons.sorter', ...colors }}>
       {children}
     </Button>
   );

@@ -3,10 +3,10 @@
 exports[`App has a valid snapshot 1`] = `
 <div>
   <div
-    className="flex justify-center items-center flex-row my-12"
+    className="flex justify-center items-center flex-col md:flex-row my-12"
   >
     <h1
-      className="order-1 text-lg text-gray-800 text-right px-4"
+      className="md:order-1 text-lg text-gray-800 text-right px-4 mb-8 md:mb-0"
     >
       Hackers News Search Engine
     </h1>
@@ -15,6 +15,7 @@ exports[`App has a valid snapshot 1`] = `
       onSubmit={[Function]}
     >
       <svg
+        className="hidden sm:block"
         fill="#ed8936"
         height={50}
         viewBox="0 0 13.229 13.229"
@@ -49,7 +50,37 @@ exports[`App has a valid snapshot 1`] = `
         className="button mx-2"
         type="submit"
       >
-        Search
+        <svg
+          className="sm:hidden"
+          fill="white"
+          height={50}
+          viewBox="0 0 13.229 13.229"
+          width={50}
+        >
+          <g
+            imageRendering="optimizeQuality"
+            shapeRendering="geometricPrecision"
+            textRendering="geometricPrecision"
+          >
+            <path
+              className="search_svg__fil0"
+              d="M2.179 2.179a4.47 4.47 0 016.312 0c1.706 1.74 1.706 4.572 0 6.312-1.74 1.706-4.572 1.706-6.312 0a4.47 4.47 0 010-6.312zm.716.716a3.481 3.481 0 000 4.88c1.331 1.33 3.515 1.33 4.88 0 1.33-1.365 1.33-3.549 0-4.88a3.481 3.481 0 00-4.88 0z"
+            />
+            <path
+              className="search_svg__fil1"
+              d="M9.55 8.218l2.524 2.56a.887.887 0 010 1.296.887.887 0 01-1.296 0L8.218 9.55c.273-.17.512-.375.717-.614.239-.205.444-.444.614-.717z"
+            />
+            <path
+              className="search_svg__fil0"
+              d="M2.383 5.01a3.165 3.165 0 012.628-2.627l.102.683a2.187 2.187 0 00-1.365.682 2.187 2.187 0 00-.682 1.365z"
+            />
+          </g>
+        </svg>
+        <span
+          className="hidden sm:block"
+        >
+          Search
+        </span>
       </button>
     </form>
   </div>
@@ -60,7 +91,7 @@ exports[`App has a valid snapshot 1`] = `
       className="table-auto text-xs"
     >
       <thead
-        className="text-left"
+        className="text-left hidden md:table-header-group"
       >
         <tr>
           <th
@@ -152,6 +183,7 @@ exports[`Search has a valid snapshot 1`] = `
   onSubmit={[Function]}
 >
   <svg
+    className="hidden sm:block"
     fill="#ed8936"
     height={50}
     viewBox="0 0 13.229 13.229"
@@ -196,7 +228,7 @@ exports[`Table has a valid snapshot 1`] = `
   className="table-auto text-xs"
 >
   <thead
-    className="text-left"
+    className="text-left hidden md:table-header-group"
   >
     <tr>
       <th
@@ -277,28 +309,28 @@ exports[`Table has a valid snapshot 1`] = `
         </a>
       </td>
       <td
-        className="px-4"
+        className="px-4 hidden md:table-cell"
       >
         1
       </td>
       <td
-        className="px-4"
+        className="px-4 hidden md:table-cell"
       >
         1
          
       </td>
       <td
-        className="px-4"
+        className="px-4 hidden md:table-cell"
       >
         2
       </td>
       <td
-        className="px-4"
+        className="px-4 hidden md:table-cell"
       >
         about 4 years ago
       </td>
       <td
-        className="px-4"
+        className="px-4 hidden md:table-cell"
       >
         <button
           className=""
@@ -340,28 +372,28 @@ exports[`Table has a valid snapshot 1`] = `
         </a>
       </td>
       <td
-        className="px-4"
+        className="px-4 hidden md:table-cell"
       >
         2
       </td>
       <td
-        className="px-4"
+        className="px-4 hidden md:table-cell"
       >
         1
          
       </td>
       <td
-        className="px-4"
+        className="px-4 hidden md:table-cell"
       >
         2
       </td>
       <td
-        className="px-4"
+        className="px-4 hidden md:table-cell"
       >
         about 4 years ago
       </td>
       <td
-        className="px-4"
+        className="px-4 hidden md:table-cell"
       >
         <button
           className=""

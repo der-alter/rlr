@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Search from './Search';
-import Table from './Table';
-import { ButtonWithLoading } from './Button';
-import { Search as SearchIcon } from './svg';
+import { Box, Container, ThemeProvider } from 'theme-ui';
+import theme from './theme';
+import Header from './components/Header';
+import Search from './components/Search';
+import Table from './components/Table';
+import { ButtonWithLoading } from './components/Button';
 
-const DEFAULT_QUERY = 'cryptoeconomics';
+const DEFAULT_QUERY = 'react';
 const DEFAULT_HPP = '100';
 const PATH_BASE = 'https://hn.algolia.com/api/v1';
 const PATH_SEARCH = '/search';
@@ -105,20 +107,24 @@ class App extends Component {
     const list = (results && results[searchKey] && results[searchKey].hits) || [];
 
     return (
-      <div>
-        <div className="flex justify-center items-center flex-col md:flex-row my-12">
-          <h1 className="md:order-1 text-lg text-gray-800 text-right px-4 mb-8 md:mb-0">
-            Hackers News Search Engine
-          </h1>
-          <Search value={searchTerm} onChange={this.onSearchChange} onSubmit={this.onSearchSubmit}>
-            <SearchIcon fill="white" className="sm:hidden" />
-            <span className="hidden sm:block">Search</span>
-          </Search>
-        </div>
-        <div className="flex items-center flex-col">
-          {error ? <p>Something went wrong.</p> : <Table list={list} onDismiss={this.onDismiss} />}
-          {
-            <div className="my-4">
+      <ThemeProvider theme={theme}>
+        <Container p={1}>
+          <Header>
+            <Search
+              searchTerm={searchTerm}
+              onChange={this.onSearchChange}
+              onSubmit={this.onSearchSubmit}
+            >
+              Search
+            </Search>
+          </Header>
+          <div>
+            {error ? (
+              <p>Something went wrong.</p>
+            ) : (
+              <Table list={list} onDismiss={this.onDismiss} />
+            )}
+            <Box sx={{ textAlign: 'center', my: 2 }}>
               <ButtonWithLoading
                 isLoading={isLoading}
                 onClick={() => this.fetchSearchTopStories(searchKey, page + 1)}
@@ -126,10 +132,10 @@ class App extends Component {
               >
                 More
               </ButtonWithLoading>
-            </div>
-          }
-        </div>
-      </div>
+            </Box>
+          </div>
+        </Container>
+      </ThemeProvider>
     );
   }
 }
