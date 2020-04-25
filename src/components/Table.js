@@ -1,6 +1,6 @@
 /** @jsx jsx */
 // eslint-disable-next-line
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import formatDistance from 'date-fns/formatDistance';
 import { sortBy } from 'lodash';
@@ -18,7 +18,7 @@ const SORTS = {
   CREATEDAT: (list) => sortBy(list, 'created_at_i'),
 };
 
-class Table extends Component {
+class Table extends PureComponent {
   constructor(props) {
     super(props);
 
