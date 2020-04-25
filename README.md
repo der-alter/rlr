@@ -32,5 +32,5 @@ https://github.com/airbnb/enzyme
 ### Follow up
 
 https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial  
-https://www.robinwieruch.de/react-hooks
+https://www.robinwieruch.de/react-hooks  
 https://github.com/the-road-to-learn-react/react-alternative-class-component-syntax
