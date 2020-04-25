@@ -14,13 +14,13 @@ class Search extends Component {
   }
 
   render() {
-    const { searchTerm, onChange, onSubmit, children } = this.props;
+    const { value, onChange, onSubmit, children } = this.props;
 
     return (
       <form onSubmit={onSubmit} sx={{ display: 'flex', flexGrow: 1, mt: [3, 'auto'] }}>
         <SearchIcon sx={{ display: ['none', 'block'], fill: 'primary' }} />
         <Input
-          value={searchTerm}
+          value={value}
           onChange={onChange}
           ref={(el) => (this.input = el)}
           sx={{ flexGrow: 1, mx: 2 }}
@@ -35,7 +35,7 @@ class Search extends Component {
 }
 
 Search.propTypes = {
-  searchTerm: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
   children: PropTypes.node,

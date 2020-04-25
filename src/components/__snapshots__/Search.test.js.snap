@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search has a valid snapshot 1`] = `
+<form
+  className="css-1lchotj"
+  onSubmit={[Function]}
+>
+  <svg
+    className="css-1bpnmta"
+  >
+    search.svg
+  </svg>
+  <input
+    className="css-15nxe6v"
+    onChange={[Function]}
+    value="ok"
+  />
+  <button
+    className="css-9si2ry"
+    type="submit"
+  >
+    <span
+      className="css-1hy7ipv"
+    >
+      Search
+    </span>
+    <svg
+      className="css-lgquwi"
+    >
+      search.svg
+    </svg>
+  </button>
+</form>
+`;

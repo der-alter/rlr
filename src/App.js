@@ -111,7 +111,7 @@ class App extends Component {
         <Container p={1}>
           <Header>
             <Search
-              searchTerm={searchTerm}
+              value={searchTerm}
               onChange={this.onSearchChange}
               onSubmit={this.onSearchSubmit}
             >
