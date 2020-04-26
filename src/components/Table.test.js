@@ -6,7 +6,7 @@ import Adapter from 'enzyme-adapter-react-16';
 import Table from './Table';
 
 describe('Table', () => {
-  const now = Date.now();
+  const now = Date.now() / 1000;
   const props = {
     list: [
       {
@@ -15,7 +15,7 @@ describe('Table', () => {
         num_comments: 1,
         points: 2,
         objectID: 'y',
-        created_at_i: now - 1,
+        created_at_i: now,
       },
       {
         title: '2',
@@ -23,7 +23,7 @@ describe('Table', () => {
         num_comments: 1,
         points: 2,
         objectID: 'z',
-        created_at_i: now - 1,
+        created_at_i: now,
       },
     ],
     onDismiss: () => 'ok',
