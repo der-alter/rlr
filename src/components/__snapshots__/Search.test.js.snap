@@ -2,16 +2,16 @@
 
 exports[`Search has a valid snapshot 1`] = `
 <form
-  className="css-1lchotj"
+  className="css-xewg3i-Search"
   onSubmit={[Function]}
 >
   <svg
-    className="css-1bpnmta"
+    className="css-5upiqe-Search"
   >
     search.svg
   </svg>
   <input
-    className="css-15nxe6v"
+    className="css-1ffb4w8-Search"
     onChange={[Function]}
     value="ok"
   />
@@ -20,12 +20,12 @@ exports[`Search has a valid snapshot 1`] = `
     type="submit"
   >
     <span
-      className="css-1hy7ipv"
+      className="css-1we8g80-Search"
     >
       Search
     </span>
     <svg
-      className="css-lgquwi"
+      className="css-15w6y0z-Search"
     >
       search.svg
     </svg>

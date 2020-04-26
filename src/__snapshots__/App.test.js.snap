@@ -13,16 +13,16 @@ exports[`App has a valid snapshot 1`] = `
       Hackers News Search Engine
     </h1>
     <form
-      className="css-1lchotj"
+      className="css-xewg3i-Search"
       onSubmit={[Function]}
     >
       <svg
-        className="css-qdzqyl"
+        className="css-1h5p7pc-Search"
       >
         search.svg
       </svg>
       <input
-        className="css-119tjkq"
+        className="css-wl8vci-Search"
         onChange={[Function]}
         value="react"
       />
@@ -31,12 +31,12 @@ exports[`App has a valid snapshot 1`] = `
         type="submit"
       >
         <span
-          className="css-1hy7ipv"
+          className="css-1we8g80-Search"
         >
           Search
         </span>
         <svg
-          className="css-lgquwi"
+          className="css-15w6y0z-Search"
         >
           search.svg
         </svg>

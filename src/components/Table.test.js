@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
-import Enzyme, { shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import Table from './Table';
 
-Enzyme.configure({ adapter: new Adapter() });
-
 describe('Table', () => {
+  const now = Date.now();
   const props = {
     list: [
       {
@@ -16,7 +15,7 @@ describe('Table', () => {
         num_comments: 1,
         points: 2,
         objectID: 'y',
-        created_at_i: 1453762117,
+        created_at_i: now - 1,
       },
       {
         title: '2',
@@ -24,7 +23,7 @@ describe('Table', () => {
         num_comments: 1,
         points: 2,
         objectID: 'z',
-        created_at_i: 1453762117,
+        created_at_i: now - 1,
       },
     ],
     onDismiss: () => 'ok',
@@ -43,6 +42,6 @@ describe('Table', () => {
 
   it('shows two items in list', () => {
     const element = shallow(<Table {...props} />);
-    expect(element.find('* + section > div').length).toBe(2);
+    expect(element.find('section > :not(header)').length).toBe(3);
   });
 });
