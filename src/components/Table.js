@@ -73,51 +73,54 @@ class Table extends PureComponent {
           <div sx={{ flex: 1 }}></div>
         </header>
 
-        {reverseSortedList.map((item, index) => (
-          <div key={index} sx={{ display: 'flex', fontSize: '.85em' }}>
-            <div sx={{ flex: 16 }}>
-              <Link
-                href={`https://news.ycombinator.com/item?id=${item.objectID}`}
-                title={item.title ? 'Read comments' : 'Read comment'}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {item.title ? item.title : item.comment_text.substring(0, 70) + '...'}
-              </Link>
-              {item.url && (
-                <IconButton
-                  onClick={() => window.open(item.url, '_blank')}
-                  title={`Go to original post: ${item.url}`}
-                >
-                  <UrlIcon
-                    sx={{
-                      fill: 'cornflowerblue',
-                      width: '1.25em',
-                      height: '1.25em',
-                    }}
-                  />
-                </IconButton>
-              )}
-            </div>
-            <div sx={{ flex: 3, display: ['none', 'block'] }}>{item.author}</div>
-            <div sx={{ flex: 1, display: ['none', 'block'] }}>{item.num_comments} </div>
-            <div sx={{ flex: 1, display: ['none', 'block'] }}>{item.points}</div>
-            <div sx={{ flex: 2, display: ['none', 'block'] }}>
-              {formatDistance(new Date(item.created_at_i * 1000), now, { addSuffix: true })}
-            </div>
-            <div sx={{ flex: 1, display: ['none', 'block'] }}>
-              <IconButton onClick={() => onDismiss(item.objectID)}>
-                <DismissIcon
-                  sx={{
-                    fill: 'danger',
-                    width: '1em',
-                    height: '1em',
-                  }}
-                />
-              </IconButton>
-            </div>
-          </div>
-        ))}
+        {reverseSortedList.map(
+          (item, index) =>
+            (item.title || item.comment_text) && (
+              <div key={index} sx={{ display: 'flex', fontSize: '.85em' }}>
+                <div sx={{ flex: 16 }}>
+                  <Link
+                    href={`https://news.ycombinator.com/item?id=${item.objectID}`}
+                    title={item.title ? 'Read comments' : 'Read comment'}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {item.title ? item.title : item.comment_text.substring(0, 70) + '...'}
+                  </Link>
+                  {item.url && (
+                    <IconButton
+                      onClick={() => window.open(item.url, '_blank')}
+                      title={`Go to original post: ${item.url}`}
+                    >
+                      <UrlIcon
+                        sx={{
+                          fill: 'cornflowerblue',
+                          width: '1.25em',
+                          height: '1.25em',
+                        }}
+                      />
+                    </IconButton>
+                  )}
+                </div>
+                <div sx={{ flex: 3, display: ['none', 'block'] }}>{item.author}</div>
+                <div sx={{ flex: 1, display: ['none', 'block'] }}>{item.num_comments} </div>
+                <div sx={{ flex: 1, display: ['none', 'block'] }}>{item.points}</div>
+                <div sx={{ flex: 2, display: ['none', 'block'] }}>
+                  {formatDistance(new Date(item.created_at_i * 1000), now, { addSuffix: true })}
+                </div>
+                <div sx={{ flex: 1, display: ['none', 'block'] }}>
+                  <IconButton onClick={() => onDismiss(item.objectID)}>
+                    <DismissIcon
+                      sx={{
+                        fill: 'danger',
+                        width: '1em',
+                        height: '1em',
+                      }}
+                    />
+                  </IconButton>
+                </div>
+              </div>
+            ),
+        )}
       </section>
     );
   }
