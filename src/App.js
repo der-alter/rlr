@@ -11,7 +11,7 @@ const DEFAULT_QUERY = 'react';
 const DEFAULT_HPP = '100';
 
 function App() {
-  const [query, setQuery] = useState('redux');
+  const [query, setQuery] = useState(DEFAULT_QUERY);
   const [{ data, isLoading, isError }, doFetch] = useDataApi(
     `https://hn.algolia.com/api/v1/search?query=${DEFAULT_QUERY}&page=0&hitsPerPage=${DEFAULT_HPP}`,
     {
