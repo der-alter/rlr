@@ -19,7 +19,6 @@ function App() {
     },
   );
 
-  console.log(isLoading);
   const { page, nbPages } = data;
 
   return (
@@ -68,6 +67,7 @@ const dataFetchReducer = (state, action) => {
   switch (action.type) {
     case 'FETCH_INIT': {
       const data = action.refresh ? { hits: [] } : state.data;
+
       return {
         ...state,
         data,
@@ -78,12 +78,13 @@ const dataFetchReducer = (state, action) => {
     case 'FETCH_SUCCESS': {
       let data;
       const { payload } = action;
-      if (action.payload.page === 0) {
+      if (payload.page === 0) {
         data = payload;
       } else {
-        const updatedHits = [...state.data.hits, ...action.payload.hits];
-        data = { payload, ...{ hits: updatedHits } };
+        const updatedHits = [...state.data.hits, ...payload.hits];
+        data = { ...payload, ...{ hits: updatedHits } };
       }
+
       return {
         ...state,
         data,
