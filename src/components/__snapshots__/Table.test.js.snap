@@ -55,9 +55,6 @@ exports[`Table has a valid snapshot 1`] = `
         Date
       </button>
     </div>
-    <div
-      className="css-1rr4qq7"
-    />
   </header>
   <div
     className="css-atfqj8"
@@ -96,20 +93,6 @@ exports[`Table has a valid snapshot 1`] = `
     >
       less than a minute ago
     </div>
-    <div
-      className="css-14ybhvo"
-    >
-      <button
-        className="css-wwcqj1"
-        onClick={[Function]}
-      >
-        <svg
-          className="css-1g5ihon"
-        >
-          dismiss.svg
-        </svg>
-      </button>
-    </div>
   </div>
   <div
     className="css-atfqj8"
@@ -147,20 +130,6 @@ exports[`Table has a valid snapshot 1`] = `
       className="css-wokw6q"
     >
       less than a minute ago
-    </div>
-    <div
-      className="css-14ybhvo"
-    >
-      <button
-        className="css-wwcqj1"
-        onClick={[Function]}
-      >
-        <svg
-          className="css-1g5ihon"
-        >
-          dismiss.svg
-        </svg>
-      </button>
     </div>
   </div>
 </section>

@@ -4,7 +4,6 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import formatDistance from 'date-fns/formatDistance';
 import { sortBy } from 'lodash';
-import { ReactComponent as DismissIcon } from '../svg/dismiss.svg';
 import { ReactComponent as UrlIcon } from '../svg/url.svg';
 // eslint-disable-next-line
 import { jsx, Button, IconButton, Link } from 'theme-ui';
@@ -36,7 +35,7 @@ class Table extends PureComponent {
   }
 
   render() {
-    const { list, onDismiss } = this.props;
+    const { list } = this.props;
     const { sortKey, isSortReverse } = this.state;
     const sortedList = SORTS[sortKey](list);
     const reverseSortedList = isSortReverse ? sortedList.reverse() : sortedList;
@@ -70,7 +69,6 @@ class Table extends PureComponent {
               Date
             </Sort>
           </div>
-          <div sx={{ flex: 1 }}></div>
         </header>
 
         {reverseSortedList.map(
@@ -107,17 +105,6 @@ class Table extends PureComponent {
                 <div sx={{ flex: 2, display: ['none', 'block'] }}>
                   {formatDistance(new Date(item.created_at_i * 1000), now, { addSuffix: true })}
                 </div>
-                <div sx={{ flex: 1, display: ['none', 'block'] }}>
-                  <IconButton onClick={() => onDismiss(item.objectID)}>
-                    <DismissIcon
-                      sx={{
-                        fill: 'danger',
-                        width: '1em',
-                        height: '1em',
-                      }}
-                    />
-                  </IconButton>
-                </div>
               </div>
             ),
         )}
@@ -136,7 +123,6 @@ Table.propTypes = {
       points: PropTypes.number,
     }),
   ).isRequired,
-  onDismiss: PropTypes.func.isRequired,
 };
 
 const Sort = ({ sortKey, activeSortKey, onSort, children }) => {

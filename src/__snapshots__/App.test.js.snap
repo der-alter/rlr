@@ -24,10 +24,10 @@ exports[`App has a valid snapshot 1`] = `
       <input
         className="css-wl8vci-Search"
         onChange={[Function]}
-        value="react"
+        value="redux"
       />
       <button
-        className="css-1cenlpe"
+        className="css-m091of"
         type="submit"
       >
         <span
@@ -52,7 +52,7 @@ exports[`App has a valid snapshot 1`] = `
           className="css-mu2wql"
         >
           <button
-            className="css-7cs3ym-Sort"
+            className="css-6gbzpn-Sort"
             onClick={[Function]}
           >
             Title
@@ -62,7 +62,7 @@ exports[`App has a valid snapshot 1`] = `
           className="css-ieri5n"
         >
           <button
-            className="css-7cs3ym-Sort"
+            className="css-6gbzpn-Sort"
             onClick={[Function]}
           >
             Author
@@ -72,7 +72,7 @@ exports[`App has a valid snapshot 1`] = `
           className="css-1rr4qq7"
         >
           <button
-            className="css-7cs3ym-Sort"
+            className="css-6gbzpn-Sort"
             onClick={[Function]}
           >
             Coms
@@ -82,7 +82,7 @@ exports[`App has a valid snapshot 1`] = `
           className="css-1rr4qq7"
         >
           <button
-            className="css-7cs3ym-Sort"
+            className="css-6gbzpn-Sort"
             onClick={[Function]}
           >
             Pts
@@ -92,49 +92,17 @@ exports[`App has a valid snapshot 1`] = `
           className="css-kzfr2u"
         >
           <button
-            className="css-7cs3ym-Sort"
+            className="css-6gbzpn-Sort"
             onClick={[Function]}
           >
             Date
           </button>
         </div>
-        <div
-          className="css-1rr4qq7"
-        />
       </header>
     </section>
     <div
       className="css-1drvtrq"
-    >
-      <svg
-        className="css-sqxpzz"
-        fill="none"
-        height={48}
-        role="img"
-        stroke="currentcolor"
-        strokeWidth={4}
-        viewBox="0 0 32 32"
-        width={48}
-      >
-        <title>
-          Loading...
-        </title>
-        <circle
-          cx={16}
-          cy={16}
-          opacity={0.125}
-          r={12}
-        />
-        <circle
-          className="css-wpcq6n"
-          cx={16}
-          cy={16}
-          r={12}
-          strokeDasharray={75.39822368615503}
-          strokeDashoffset={56.548667764616276}
-        />
-      </svg>
-    </div>
+    />
   </div>
 </div>
 `;

@@ -50,6 +50,14 @@ export default {
         bg: lighten('primary', 0.1),
         borderColor: 'primary',
       },
+      '&:focus': {
+        bg: lighten('primary', 0.1),
+        borderColor: 'primary',
+      },
+      '&:active': {
+        bg: lighten('primary', 0.1),
+        borderColor: 'primary',
+      },
     },
     sorter: {
       cursor: 'pointer',
@@ -64,6 +72,14 @@ export default {
       borderColor: lighten('primary', 0.3),
       width: '100%',
       '&:hover': {
+        bg: 'muted',
+        borderColor: 'primary',
+      },
+      '&:focus': {
+        bg: 'muted',
+        borderColor: 'primary',
+      },
+      '&:active': {
         bg: 'muted',
         borderColor: 'primary',
       },
