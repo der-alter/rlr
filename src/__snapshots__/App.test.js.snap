@@ -24,7 +24,7 @@ exports[`App has a valid snapshot 1`] = `
       <input
         className="css-wl8vci-Search"
         onChange={[Function]}
-        value="redux"
+        value="react"
       />
       <button
         className="css-m091of"
