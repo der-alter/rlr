@@ -30,7 +30,7 @@ function App() {
             onChange={(e) => setQuery(e.target.value)}
             onSubmit={(event) => {
               doFetch(
-                `http://hn.algolia.com/api/v1/search?query=${query}&page=0&hitsPerPage=${DEFAULT_HPP}`,
+                `https://hn.algolia.com/api/v1/search?query=${query}&page=0&hitsPerPage=${DEFAULT_HPP}`,
               );
               event.preventDefault();
             }}
@@ -46,7 +46,7 @@ function App() {
                 isLoading={isLoading}
                 onClick={() => {
                   doFetch(
-                    `http://hn.algolia.com/api/v1/search?query=${query}&page=${
+                    `https://hn.algolia.com/api/v1/search?query=${query}&page=${
                       page + 1
                     }&hitsPerPage=${DEFAULT_HPP}`,
                   );
